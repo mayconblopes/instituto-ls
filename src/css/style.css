@@ -1,0 +1,118 @@
+.blue-ls {
+    color:rgb(8, 8, 189);
+}
+
+.btn-blue-ls {
+    background-color:rgb(8, 8, 189);
+}
+
+.border-blue-ls {
+    border-color:rgb(8, 8, 189);
+}
+
+.black-ls {
+    color:rgb(3, 1, 32);
+}
+
+.navbar {
+    box-shadow: 2px 1px 5px #00000096;
+}
+
+@media (max-width: 368px) {
+    #logo {
+        width: 30px;
+    }
+
+    .navbar-brand {
+        font-size: 16px;
+    }
+
+    .navbar-toggler {
+        padding: 0;
+
+    }
+}
+
+.carousel-title {
+    font-family: 'Pacifico', cursive;
+}
+
+.carousel-img {
+    object-fit: cover;
+    object-position: 0 0%;
+    height: 500px;
+}
+
+.carousel-caption {
+    text-align: right;
+    left: auto;
+    bottom: 9%;
+}
+
+@media (max-width: 767px){
+
+    .carousel-title {
+       color: white;
+       margin: 0;
+    }
+
+    .carousel-caption {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        left: 15%;
+        height: 48px !important;
+        background-color: rgb(8, 8, 189, 20%);
+        border-radius: 10px;
+    }
+
+    .carousel-control-next {
+        align-items: flex-end;
+        margin-bottom: 53px;
+    }
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    background-color: rgb(8, 8, 189);
+}
+
+.carousel-indicators [data-bs-target]{
+    background-color: rgb(8, 8, 189);
+}
+
+@media (max-width: 818px) {
+    .carousel-img {
+        object-position: 6% 0;
+    }
+}
+
+.card-img-position {
+    object-fit: cover;
+    height: 200px;
+}
+
+.card-default-width {
+    width: 18rem;
+}
+
+
+footer {
+    background-color: rgb(86 103 226 / 16%);
+}
+
+.social.container {
+    display: flex;
+}
+
+.footer-side {
+    width: max-content;
+}
+
+#footer-contact {
+    background-color: rgb(86 103 226 / 06%);
+}
+
+#copyright {
+    background-color: rgb(86 103 226 / 26%);
+    box-shadow: 2px 1px 5px #00000096;
+}
