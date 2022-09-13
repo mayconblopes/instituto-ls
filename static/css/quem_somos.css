@@ -1,5 +1,5 @@
 .carousel-background {
-    background: linear-gradient(rgb(0, 0, 0, .5), rgb(0, 0, 0, .5)), url(/src/img/dark-bg.jpg);
+    background: linear-gradient(rgb(0, 0, 0, .5), rgb(0, 0, 0, .5)), url(/static/img/dark-bg.jpg);
     background-size: cover;
     background-position: bottom;
 
