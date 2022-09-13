@@ -8,5 +8,5 @@ Trata-se de um projeto web para um Instituto de Beleza e Estética.
 
 <h2>Paleta básica de cores</h2>
 <br>
-<img src="src/img/paleta_cores.png">
+<img src="static/img/paleta_cores.png">
 
