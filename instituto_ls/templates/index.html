@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+  <main>
+    <!-- CARROSEL -->
+    <section id="carouselCaptions" class="carousel slide carousel-dark" data-bs-ride="carousel">
+
+      <!-- <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div> -->
+
+      <section class="carousel-inner">
+
+        <article class="carousel-item active">
+          <img src="{% static 'img/carrossel-img1.jpg' %}" class="d-block w-100 carousel-img" alt="Mulher com olhar envolvente">
+          <div class="carousel-caption d-none text-right d-md-block h-50">
+            <h1 class="carousel-title gold-ls">Olhe para si</h1>
+          </div>
+        </article>
+
+        <article class="carousel-item">
+          <img src="{% static 'img/carrossel-img2.jpg' %}" class="d-block w-100 carousel-img" alt="Mulher com olhar envolvente">
+          <div class="carousel-caption d-none d-md-block h-50">
+            <h1 class="carousel-title gold-ls">Ressalte sua beleza</h1>
+          </div>
+        </article>
+
+        <article class="carousel-item">
+          <img src="{% static 'img/carrossel-img3.jpg' %}" class="d-block w-100 carousel-img" alt="Mulher com olhar envolvente">
+          <div class="carousel-caption d-none d-md-block h-50">
+            <h1 class="carousel-title gold-ls">Encontre-se</h1>
+          </div>
+        </article>
+
+      </section>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+    </section>
+    <!-- END CARROSEL -->
+
+    <!-- TITULO -->
+    <section class="fs-5 mt-5 pt-3 pb-1 mb-5 container text-center bg-light rounded w-75 shadow-sm">
+      <h1 class="text-center black-ls pt-5">Servindo pessoas e transformando olhares</h1>
+      <p class="text-center text-secundary pb-5">Nossas técnicas embelezam, elevem a autoestima e valorizam o que há de mais encantador em você: o olhar.</p>
+    </section>
+    <!-- END TITULO -->
+
+    <!-- CARDS -->
+    <section class="container">
+      <div class="row justify-content-center">
+        <article class="card card-default-width border-gold-ls p-0 m-4 col-12 col-sm-6 col-md-4 col-lg-2">
+          <img src="{% static 'img/sobrancelhas.jpg' %}" class="card-img-top card-img-position" alt="Imagem de uma mulher com sobrancelhas feitas em destaque">
+            <div class="card-body">
+              <h5 class="card-title gold-ls">Design de sobrancelhas</h5>
+              <p class="card-text">Designs com sofisticadas técnicas de visagismo e ancoragem para um desenho único.</p>
+              <a href="#" class="btn btn-primary btn-gold-ls">Saiba mais</a>
+            </div>
+        </article>
+
+        <article class="card card-default-width border-gold-ls p-0 m-4 col-12 col-sm-6 col-md-4 col-lg-2">
+          <img src="{% static 'img/micropigmentacao.jpeg' %}" class="card-img-top card-img-position" alt="Imagem de uma mulher com sobrancelhas feitas em destaque">
+            <div class="card-body">
+              <h5 class="card-title gold-ls">Micropigmentação</h5>
+              <p class="card-text">Micropigmentação com requintadas técnicas Fio a Fio, Esfumada Ombre entre outras).</p>
+              <a href="#" class="btn btn-primary btn-gold-ls">Saiba mais</a>
+            </div>
+        </article>
+
+        <article class="card card-default-width border-gold-ls p-0 m-4 col-12 col-sm-6 col-md-4 col-lg-2">
+          <img src="{% static 'img/cliente_cilios_3.jpeg' %}" class="card-img-top card-img-position" alt="Imagem de uma mulher com cílios alongados em destaque">
+            <div class="card-body">
+              <h5 class="card-title gold-ls">Extensão de cílios</h5>
+              <p class="card-text">Extensão de cílios com fios de Seda e com Técnica Full Lash, sem excesso de cola e bem mapeado.</p>
+              <a href="#" class="btn btn-primary btn-gold-ls">Saiba mais</a>
+            </div>
+        </article>
+
+        <article class="card card-default-width border-gold-ls p-0 m-4 col-12 col-sm-6 col-md-4 col-lg-2">
+          <img src="{% static 'img/micropigmentacao_labial.jpeg' %}" class="card-img-top card-img-position" alt="Imagem de uma boca lindamente delineada com micropigmentação">
+            <div class="card-body">
+              <h5 class="card-title gold-ls">Micropigmentação labial</h5>
+              <p class="card-text">Perfeita técnica para cobrir falhas, avivar cores e definir os lábios, para um aspecto saudável.</p>
+              <a href="#" class="btn btn-primary btn-gold-ls">Saiba mais</a>
+            </div>
+        </article>
+
+      </div>
+    </section>
+    <!-- END CARDS -->
+  </main>
+{% endblock content %}
+
+
+

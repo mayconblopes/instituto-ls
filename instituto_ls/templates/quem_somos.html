@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+  <main>
+    <!-- CARROSEL -->
+
+    <div id="carousel-hero" class="carousel slilde carousel-fade" data-bs-interval="15000" data-touch="true" data-bs-ride="carousel">
+
+      <div class="carousel-inner carousel-background">
+        <!-- HERO 1 -->
+        <div class="carousel-item active">
+          <div class="container">
+              <div class="row align-items-center flex-row">
+                <img src="src/img/hero_kenia.png" class="mt-5 col-6" alt="...">
+
+                <section class="hero-caption col-6 mt-5 p-0 pt-5 pe-5 text-light">
+                  <p>
+                    Olá, eu sou <span class="text-warning"> Kênia Andrade</span>.<br>
+                    Sou especialista e pesquisadora
+                    da técnica Visagismo, Nano
+                    Make Up, micropigmentadora master e
+                    maquiadora profissional.
+                  </p>
+                  </p>
+                </section>
+              </div>
+          </div>
+        </div>
+        <!-- END HERO 1 -->
+
+        <!-- HERO 2 -->
+        <div class="carousel-item">
+          <div class="container">
+            <div class="row align-items-center flex-row">
+              <img src="src/img/hero_ednaldo.png" class="w-50 mt-5 col-6" alt="...">
+
+              <section class="hero-caption col-6 mt-5 p-0 pt-5 pe-5 text-light">
+                <p>
+                  Olá, eu sou <span class="text-warning">Ednaldo Andrade</span>.<br> 
+                  Micropigmentador master, Especialista em Micropigmentação Labial, Reabilitação
+                  Micropigmentar e Lash Designer.
+                </p>
+              </section>
+            </div>
+        </div>
+        <!-- END HERO 2 -->
+      </div>
+      <button class="carousel-control-next" type="button" data-bs-target="#carousel-hero" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- END CARROSEL -->
+
+    <!-- DESTAQUE 1 -->
+    <section class="fs-5 mt-5 pt-3 pb-1 mb-5 container text-center bg-light rounded w-75 shadow-sm">
+      <div class="row">
+        <img src="src/img/top_of_mind.jpg" width="80%" alt="Kenia e Ednaldo sendo reconhecidos na premiação Top of Mind Brazil.">
+        <p class="mt-4">Somos bicampeões do prêmio <span class="fw-bold">Top of Mind Brazil</span>!<p>
+      </div>
+    </section>
+    <!-- END DESTAQUE 1-->
+
+    <!-- DESTAQUE 2 -->
+    <section class="fs-5 mt-5 pt-3 pb-1 mb-5 container text-center bg-light rounded w-75 shadow-sm">
+      <p>
+        Somos profissionais altamente capacitados para entregar com excelência o resultado esperado, por meio das técnicas mais modernas disponíveis.
+        Nossa metodologia tem alicerce na melhoria contínua e promoção da autoestima do ser humano.
+        <br>
+        <span class="fw-semibold">Veja o que alguns de nossos clientes falam sobre nossos serviços e venha nos conhecer, será um enorme prazer!</span>
+      </p>
+    </section>
+    <!-- END DESTAQUE 2-->
+
+    <!-- GALLERY -->
+    <section class="container">
+        <div class="d-flex flex-wrap gallery align-items-center justify-content-evenly">
+
+          <!-- FEEDBACKS EM VIDEO -->
+            <iframe class="mb-4 rounded" width="90%" height="550px" src="https://www.youtube.com/embed/zcFqFcvNHS4"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+
+            <iframe src="https://albumizr.com/a/Ek3t" scrolling="no" frameborder="0" allowfullscreen width="90%" height="700"></iframe>
+
+      </section>  
+      <!-- END GALLERY --> 
+
+  </main>
+
+{% endblock content %} 

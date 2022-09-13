@@ -120,7 +120,7 @@ footer {
  */
 
 .divisor {
-    background-image: url("/src/img/footer_divisor.png");
+    background-image: url("/static/img/footer_divisor.png");
     background-repeat: no-repeat;
     background-size: 10px;
     background-position-x: 50%;
@@ -128,7 +128,7 @@ footer {
 }
 
 #footer-contact {
-    background-image: url("/src/img/footer_flower.png");
+    background-image: url("/static/img/footer_flower.png");
     background-size: 75px;
     background-repeat: no-repeat;
     background-position-x: 80%;
