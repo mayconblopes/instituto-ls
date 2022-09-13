@@ -1,0 +1,19 @@
+.carousel-background {
+    background: linear-gradient(rgb(0, 0, 0, .5), rgb(0, 0, 0, .5)), url(/src/img/dark-bg.jpg);
+    background-size: cover;
+    background-position: bottom;
+
+}
+
+.hero-caption p {
+    font-size: 3vw;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+
+.gallery img {
+    width: 35%!important;
+}
