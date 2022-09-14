@@ -13,43 +13,46 @@
     <div id="carousel-hero" class="carousel slilde carousel-fade" data-bs-interval="15000" data-touch="true" data-bs-ride="carousel">
 
       <div class="carousel-inner carousel-background">
-        <!-- HERO 1 -->
-        <div class="carousel-item active">
-          <div class="container">
-              <div class="row align-items-center flex-row">
-                <img src="{% static 'img/hero_kenia.png' %}" class="mt-5 col-6" alt="...">
+        
+        <!-- HEROS -->
+        {% for hero in heroes %}
+          {% if forloop.first %}
+            <div class="carousel-item active">
+          {% else %}
+            <div class="carousel-item">
+          {% endif %}
+              <div class="container">
+                  <div class="row align-items-center flex-row">
+                    <img src="{{hero.cover}}" class="mt-5 col-6" alt="...">
 
-                <section class="hero-caption col-6 mt-5 p-0 pt-5 pe-5 text-light">
-                  <p>
-                    Olá, eu sou <span class="text-warning"> Kênia Andrade</span>.<br>
-                    Sou especialista e pesquisadora
-                    da técnica Visagismo, Nano
-                    Make Up, micropigmentadora master e
-                    maquiadora profissional.
-                  </p>
-                  </p>
-                </section>
+                    <section class="hero-caption col-6 mt-5 p-0 pt-5 pe-5 text-light">
+                      <p>
+                        Olá, eu sou <span class="text-warning">{{hero.name}}</span>.<br>
+                        {{hero.bio}}
+                      </p>
+                      </p>
+                    </section>
+                  </div>
               </div>
-          </div>
-        </div>
-        <!-- END HERO 1 -->
+            </div>
+        {% endfor %}
+        <!-- END HERO[0] -->
 
-        <!-- HERO 2 -->
+        {% comment %} <!-- HERO[1] -->
         <div class="carousel-item">
           <div class="container">
             <div class="row align-items-center flex-row">
-              <img src="{% static 'img/hero_ednaldo.png' %}" class="w-50 mt-5 col-6" alt="...">
+              <img src="{{heros[1].cover}}" class="w-50 mt-5 col-6" alt="...">
 
               <section class="hero-caption col-6 mt-5 p-0 pt-5 pe-5 text-light">
                 <p>
-                  Olá, eu sou <span class="text-warning">Ednaldo Andrade</span>.<br> 
-                  Micropigmentador master, Especialista em Micropigmentação Labial, Reabilitação
-                  Micropigmentar e Lash Designer.
+                  Olá, eu sou <span class="text-warning">{{heros[1].name}}</span>.<br> 
+                  {{heros[1].bio}}
                 </p>
               </section>
             </div>
         </div>
-        <!-- END HERO 2 -->
+        <!-- END HERO[1] --> {% endcomment %}
       </div>
       <button class="carousel-control-next" type="button" data-bs-target="#carousel-hero" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -84,13 +87,10 @@
         <div class="d-flex flex-wrap gallery align-items-center justify-content-evenly">
 
           <!-- FEEDBACKS EM VIDEO -->
-            <iframe class="mb-4 rounded" width="90%" height="550px" src="https://www.youtube.com/embed/zcFqFcvNHS4"
-              title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen>
-            </iframe>
-
-            <iframe src="https://albumizr.com/a/Ek3t" scrolling="no" frameborder="0" allowfullscreen width="90%" height="700"></iframe>
+            {{feedbacks.video_iframe|safe}}
+            
+          <!-- FEEDBACKS EM IMAGENS -->
+            {{feedbacks.image_iframe|safe}}
 
       </section>  
       <!-- END GALLERY --> 

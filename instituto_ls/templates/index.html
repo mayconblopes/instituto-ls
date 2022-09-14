@@ -56,42 +56,37 @@
     <!-- CARDS -->
     <section class="container">
       <div class="row justify-content-center">
-        
+
+        {% for product in products %}
         <article class="card card-default-width border-gold-ls p-0 m-4 col-12 col-sm-6 col-md-4 col-lg-2">
-          <img src="{% static 'img/sobrancelhas.jpg' %}" class="card-img-top card-img-position" alt="Imagem de uma mulher com sobrancelhas feitas em destaque">
+          <img src="{{product.cover}}" class="card-img-top card-img-position" alt="Imagem de {{product.title}}">
             <div class="card-body">
-              <h5 class="card-title gold-ls">Design de sobrancelhas</h5>
-              <p class="card-text">Designs com sofisticadas técnicas de visagismo e ancoragem para um desenho único.</p>
-              <a href="#" class="btn btn-primary btn-gold-ls">Saiba mais</a>
+              <h5 class="card-title gold-ls">{{product.title}}</h5>
+              <p class="card-text">{{product.description}}</p>
+              <a href="#" class="btn btn-primary btn-gold-ls" data-bs-toggle="modal" data-bs-target="#know-more-modal-{{product.pk}}">Saiba mais</a>
             </div>
         </article>
 
-        <article class="card card-default-width border-gold-ls p-0 m-4 col-12 col-sm-6 col-md-4 col-lg-2">
-          <img src="{% static 'img/micropigmentacao.jpeg' %}" class="card-img-top card-img-position" alt="Imagem de uma mulher com sobrancelhas feitas em destaque">
-            <div class="card-body">
-              <h5 class="card-title gold-ls">Micropigmentação</h5>
-              <p class="card-text">Micropigmentação com requintadas técnicas Fio a Fio, Esfumada Ombre entre outras).</p>
-              <a href="#" class="btn btn-primary btn-gold-ls">Saiba mais</a>
+        <!-- Know More Modal -->
+        <div class="modal fade" id="know-more-modal-{{product.pk}}" tabindex="-1" aria-labelledby="ModalLabel-{{product.pk}}" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="ModalLabel-{{product.pk}}">{{product.title}}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                {{product.know_more}}
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
+              </div>
             </div>
-        </article>
+          </div>
+        </div>
+        {% comment %} END MODAL {% endcomment %}
 
-        <article class="card card-default-width border-gold-ls p-0 m-4 col-12 col-sm-6 col-md-4 col-lg-2">
-          <img src="{% static 'img/cliente_cilios_3.jpeg' %}" class="card-img-top card-img-position" alt="Imagem de uma mulher com cílios alongados em destaque">
-            <div class="card-body">
-              <h5 class="card-title gold-ls">Extensão de cílios</h5>
-              <p class="card-text">Extensão de cílios com fios de Seda e com Técnica Full Lash, sem excesso de cola e bem mapeado.</p>
-              <a href="#" class="btn btn-primary btn-gold-ls">Saiba mais</a>
-            </div>
-        </article>
-
-        <article class="card card-default-width border-gold-ls p-0 m-4 col-12 col-sm-6 col-md-4 col-lg-2">
-          <img src="{% static 'img/micropigmentacao_labial.jpeg' %}" class="card-img-top card-img-position" alt="Imagem de uma boca lindamente delineada com micropigmentação">
-            <div class="card-body">
-              <h5 class="card-title gold-ls">Micropigmentação labial</h5>
-              <p class="card-text">Perfeita técnica para cobrir falhas, avivar cores e definir os lábios, para um aspecto saudável.</p>
-              <a href="#" class="btn btn-primary btn-gold-ls">Saiba mais</a>
-            </div>
-        </article>
+        {% endfor %}
 
       </div>
     </section>

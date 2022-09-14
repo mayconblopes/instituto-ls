@@ -1,0 +1,1 @@
+web: gunicorn instituto_ls_project.wsgi
