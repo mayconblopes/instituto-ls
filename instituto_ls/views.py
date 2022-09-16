@@ -1,6 +1,7 @@
 from django.shortcuts import render
-
 from instituto_ls.models import Feedback, Hero, Product
+
+
 
 
 def index(request):
