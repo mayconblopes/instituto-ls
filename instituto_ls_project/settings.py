@@ -21,16 +21,39 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+DEBUG = True
 
-# SECRET_KEY AND DEBUG SELECTION
-if os.getenv('SECRET_KEY'):
-    DEBUG = int(os.getenv('DEBUG'))  # default on server == 0
-    SECRET_KEY = os.getenv('SECRET_KEY')
+if DEBUG:
+    SECRET_KEY = config('SECRET_KEY')
+    ADMIN_PWD = config('ADMIN_PWD')
+
+    GMAIL = config('GMAIL')
+    GMAIL_PWD = config('GMAIL_PWD')
+    
+    # firebase config
+    APIKEY = config('APIKEY')
+    AUTHDOMAIN = config('AUTHDOMAIN')
+    PROJECTID = config('PROJECTID')
+    STORAGEBUCKET = config('STORAGEBUCKET')
+    MESSAGINGSENDERID = config('MESSAGINGSENDERID')
+    APPID = config('APPID')
+
 else:
-    DEBUG = int(config('DEBUG'))
-    SECRET_KEY = config('SK')
+    SECRET_KEY = os.getenv('SECRET_KEY')
+    ADMIN_PWD = os.getenv('ADMIN_PWD')
+
+    GMAIL = os.getenv('GMAIL')
+    GMAIL_PWD = os.getenv('GMAIL_PWD')
+
+    # firebase config
+    APIKEY  = os.getenv('APIKEY')
+    AUTHDOMAIN = os.getenv('AUTHDOMAIN')
+    PROJECTID = os.getenv('PROJECTID')
+    STORAGEBUCKET = os.getenv('STORAGEBUCKET')
+    MESSAGINGSENDERID=os.getenv('MESSAGINGSENDERID')
+    APPID = os.getenv('APPID')
+
+    
 
 ALLOWED_HOSTS = ['*']
 
@@ -120,6 +143,13 @@ USE_I18N = True
 
 USE_TZ = True
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# DEFAULT_FILE_STORAGE = 'institutols-3b5e7.appspot.com'
+# GS_BUCKET_NAME = 'institutols-3b5e7.appspot.com'
+
+FIREBASE_ORM_CERTIFICATE = 'institutols-3b5e7-firebase-adminsdk-8rh39-32bcbc348f.json'
+FIREBASE_ORM_BUCKET_NAME = '<BUCKET_NAME>.appspot.com'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
@@ -127,6 +157,9 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
